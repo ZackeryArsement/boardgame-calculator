@@ -12,8 +12,8 @@ const ResourceNode = (props) => {
             <Text style={styles.resourceType}>
                 {props.resource}
             </Text>
-            <Text style={styles.resourceValue}>
-                {props.value}
+            <Text style={styles.resourceValue} value={props.value[props.index]}>
+                {props.value[props.index]}
             </Text>
             <Text style={styles.resourcePerTurn}>
                 {props.perTurn}/turn
@@ -35,18 +35,16 @@ const styles = StyleSheet.create({
     },
     resourceType: {
         fontSize: 54,
-        // backgroundColor: 'gray',
         width: 150
     },
     resourceValue: {
         fontSize: 42,
-        // backgroundColor: 'green',
+        paddingTop: 10,
         width: 110,
         textAlign: 'center'
     },
     resourcePerTurn: {
         fontSize: 28,
-        // backgroundColor: 'blue',
         width: 115,
         textAlign: 'right',
         paddingTop: 20
